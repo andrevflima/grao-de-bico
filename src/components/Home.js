@@ -1,4 +1,3 @@
-// src/pages/Home.js
 import Header from '../components/Header';
 import { useState, useRef } from 'react';
 import catalogData from '../utils/catalogUtils';
@@ -32,7 +31,7 @@ const Home = () => {
   };
 
   const removeAllItems = () => {
-    setSelectedItems([]); // Remove todos os itens selecionados
+    setSelectedItems([]); 
   };
 
   const sendWhatsAppMessage = () => {
@@ -48,11 +47,11 @@ const Home = () => {
         <div className="home-logo">
           <img src="../assets/logo.webp" alt="logo grão de bico" />
         </div>
+      </section>
         <div className="home-description">
           <img src="../assets/seta.svg" alt="seta" />
           <span>Arraste para ver o nosso catálogo</span>
         </div>
-      </section>
 
       {Object.entries(catalogData).map(([category, items], index) => (
         <section
@@ -61,31 +60,35 @@ const Home = () => {
           ref={(el) => (sectionsRef.current[index] = el)}
           className="catalog-section"
         >
-          <h2>{`Catálogo de ${category}`}</h2>
-          <p>Aqui você encontra produtos selecionados do catálogo de {category}.</p>
+          <img src="../assets/folhabg.webp" className='folhabg' alt="seta" />
+          <div className='content'>
+            <h2>{`Catálogo de ${category}`}</h2>
+            <p>Aqui você encontra produtos selecionados do catálogo de {category}.</p>
+          
 
-          <button
-            onClick={() => handleSelectAll(items)}
-            className="select-all-button"
-          >
-            {items.every((item) => selectedItems.includes(item))
-              ? 'Desmarcar Todos'
-              : 'Selecionar Todos'}
-          </button>
+            <button
+              onClick={() => handleSelectAll(items)}
+              className="select-all-button"
+            >
+              {items.every((item) => selectedItems.includes(item))
+                ? 'Desmarcar Todos'
+                : 'Selecionar Todos'}
+            </button>
 
-          <div className="catalog-items">
-            {items.map((item, idx) => (
-              <label key={idx} className="catalog-item">
-                <input
-                  type="checkbox"
-                  value={item}
-                  checked={selectedItems.includes(item)}
-                  onChange={handleCheckboxChange}
-                />
-                {item}
-              </label>
-            ))}
-          </div>
+            <div className="catalog-items">
+              {items.map((item, idx) => (
+                <label key={idx} className="catalog-item">
+                  <input
+                    type="checkbox"
+                    value={item}
+                    checked={selectedItems.includes(item)}
+                    onChange={handleCheckboxChange}
+                  />
+                  {item}
+                </label>
+              ))}
+            </div>
+            </div>
         </section>
       ))}
 
@@ -107,7 +110,6 @@ const Home = () => {
                 ))}
               </ul>
               
-              {/* Botão de Remover Tudo aparece somente se o menu estiver aberto */}
               <button onClick={removeAllItems}>
                 Remover Tudo
               </button>

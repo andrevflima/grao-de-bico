@@ -1,13 +1,29 @@
-// src/components/FaleConosco.js
 import React from 'react';
+import './Home.css';
 
-const FaleConosco = () => {
+const QuemSomos = () => {
   return (
-    <div>
-      <h1>Fale Conosco</h1>
-      <p>Entre em contato através do nosso formulário.</p>
-    </div>
+    <section className='quem-somos'>
+      <div className='content'>
+        <h1>Fale Conosco</h1>
+        
+      <a href='/' class="select-all-button">Voltar para Home</a>
+      </div>
+
+      <div className='Endereco'>
+
+      </div>
+
+      <div className='Endereco'>
+
+      </div>
+
+      <div className='Instagram'>
+
+      </div>
+
+    </section>
   );
 };
 
-export default FaleConosco;
+export default QuemSomos;
