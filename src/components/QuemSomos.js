@@ -7,6 +7,7 @@ const QuemSomos = () => {
     <section className='quem-somos'>
       <div className='content'>
         <h1>Quem Somos</h1>
+        <a href='/' class="select-all-button">Voltar para Home</a>
         <p>Prazer, Grão de bico Recife! ✨
         <br></br>
         <br></br>
@@ -29,7 +30,7 @@ const QuemSomos = () => {
         <br></br>
         <br></br>
         Agradecemos a todos que fizeram parte dessa jornada, desde os primeiros passos até o que está por vir. Junte-se a nós enquanto continuamos a criar uma história de sucesso, uma experiência de compra excepcional e um compromisso contínuo com o poder da natureza. 🌿✨</p>
-      <a href='/' class="select-all-button">Voltar para Home</a>
+
       </div>
 
     </section>

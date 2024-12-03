@@ -36,7 +36,7 @@ const Home = () => {
 
   const sendWhatsAppMessage = () => {
     const message = `Itens selecionados: ${selectedItems.join(', ')}`;
-    const whatsappUrl = `https://wa.me/5581995360294?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/558194069803?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -56,7 +56,10 @@ const Home = () => {
       {Object.entries(catalogData).map(([category, items], index) => (
         <section
           key={index}
-          id={`catalogo-${category.toLowerCase()}`}
+          id={`catalogo-${category
+            .toLowerCase()
+            .replace(/ /g, "-") // Substitui espaços por hífens
+            .replace(/[^a-z0-9-áàãâéêíóôõúç-]/g, "")}`}
           ref={(el) => (sectionsRef.current[index] = el)}
           className="catalog-section"
         >
