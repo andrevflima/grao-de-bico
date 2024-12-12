@@ -151,7 +151,7 @@ const Home = () => {
               <ul>
                 {selectedItems.map((item, idx) => (
                   <li key={idx}>
-                    {item}
+                    {item}: 
                     <input
                       type="number"
                       value={itemQuantities[item] || ''}
@@ -160,7 +160,7 @@ const Home = () => {
                       }
                       placeholder="Quantidade (g)"
                       required
-                    />g
+                    /> g
                     <button onClick={() => removeItem(item)}>Remover</button>
                   </li>
                 ))}
