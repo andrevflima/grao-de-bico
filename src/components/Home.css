@@ -7,14 +7,14 @@ html, body {
   padding: 0;
   height: 100%; 
   overflow: auto;
-  background-color: #FFFBDF ; 
+  background-color: #FFFBDF;
 }
 
 .home {
   height: auto;
 }
 
-.home-intro{
+.home-intro {
   height: 100vh; 
   display: flex;
   flex-direction: column;
@@ -52,16 +52,16 @@ html, body {
   padding: 20px;
   position: relative;
   margin-top: 1rem;
-  h2{
+  h2 {
     margin-bottom: 0rem;
   }
-  .content{
+  .content {
     z-index: 1;
     position: relative;
   }
 }
 
-.folhabg{
+.folhabg {
   position: absolute;
   top: -1rem;
   left: -1rem;
@@ -162,6 +162,15 @@ html, body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem;
+}
+
+.selected-items-menu input[type="number"] {
+  width: 50px;
+  padding: 5px;
+  border: 2px solid #e2d46a;
+  border-radius: 5px;
+  text-align: right;
+  background-color: #fcf09c;
 }
 
 .selected-items-menu button {
